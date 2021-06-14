@@ -1,7 +1,7 @@
 # PAICE: Phylogeographic Analysis of Island Colonization Events
 
 <!-- badges: start -->
-[![Download](https://img.shields.io/badge/download-PAICE-green)](https://github.com/PAICEcode/PAICE/blob/main/PAICE_1.0.0.tar.gz)
+[![Download](https://img.shields.io/badge/download-PAICE-green)](https://github.com/PAICEcode/PAICE/raw/main/PAICE_1.0.0.tar.gz)
 [![Maintaner](https://img.shields.io/badge/maintainer-Alberto%20J.%20Coello-blue)](http://www.rjb.csic.es/jardinbotanico/jardin/contenido.php?Pag=413&tipo=cientifico&cod=176&len=en)
 <!-- badges: end -->
 
@@ -9,7 +9,7 @@ PAICE is designed to estimate the number of inter-island colonization events in 
 
 ## Installation
 
-To install PAICE download the file [PAICE_1.0.0.tar.gz](https://github.com/PAICEcode/PAICE/blob/main/PAICE_1.0.0.tar.gz) and save it in your working directory. Then execute the following code:
+To install PAICE download the file [PAICE_1.0.0.tar.gz](https://github.com/PAICEcode/PAICE/raw/main/PAICE_1.0.0.tar.gz) and save it in your working directory. Then execute the following code:
 
 ```r
 install.packages("PAICE_1.0.0.tar.gz")
