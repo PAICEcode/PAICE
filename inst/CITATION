@@ -1,0 +1,21 @@
+citHeader("To cite 'PAiCE' in publications use:")
+
+citEntry(entry = "Article",
+  title        = "PAICE: a novel method for Phylogeographic Analysis of Island Colonization Events considering sampling effort",
+  author       = personList(as.person("Alberto J. Coello"),
+                   as.person("Ruben H. Heleno"),
+                   as.person("Mario Fernandez-Mazuecos"),
+                   as.person("Pablo Vargas")),
+  journal      = "Journal",
+  year         = "Year",
+  volume       = "Volume",
+  number       = "Number",
+  pages        = "Pages",
+  url          = "Website",
+
+  textVersion  =
+  paste("Alberto J. Coello, Ruben H. Heleno, Mario Fernandez-Mazuecos, Pablo Vargas (Year).",
+        "PAICE: a novel method for Phylogeographic Analysis of Island Colonization Events considering sampling effort",
+        "Journal, Volume(Number), Pages.",
+        "https://github.com/PAICEcode/PAICE.")
+)
