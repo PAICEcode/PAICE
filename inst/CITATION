@@ -1,21 +1,21 @@
 citHeader("To cite 'PAiCE' in publications use:")
 
 citEntry(entry = "Article",
-  title        = "PAICE: a novel method for Phylogeographic Analysis of Island Colonization Events considering sampling effort",
+  title        = "PAICE: A new R package to estimate the number of inter-island colonizations considering haplotype data and sample size",
   author       = personList(as.person("Alberto J. Coello"),
-                   as.person("Ruben H. Heleno"),
                    as.person("Mario Fernandez-Mazuecos"),
+                   as.person("Ruben H. Heleno"),
                    as.person("Pablo Vargas")),
-  journal      = "Journal",
-  year         = "Year",
-  volume       = "Volume",
-  number       = "Number",
-  pages        = "Pages",
-  url          = "Website",
+  journal      = "Journal of Biogeography",
+  year         = "2022",
+  volume       = "49",
+  number       = "4",
+  pages        = "577-589",
+  url          = "https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341",
 
   textVersion  =
-  paste("Alberto J. Coello, Ruben H. Heleno, Mario Fernandez-Mazuecos, Pablo Vargas (Year).",
-        "PAICE: a novel method for Phylogeographic Analysis of Island Colonization Events considering sampling effort",
-        "Journal, Volume(Number), Pages.",
-        "https://github.com/PAICEcode/PAICE.")
+  paste("Alberto J. Coello, Mario Fernandez-Mazuecos, Ruben H. Heleno, Pablo Vargas (2022).",
+        "PAICE: A new R package to estimate the number of inter-island colonizations considering haplotype data and sample size",
+        "Journal of Biogeography, 49(4), 577-589.",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341")
 )

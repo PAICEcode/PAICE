@@ -73,7 +73,7 @@
 
 \details{
     Genetic and field estimation are fitted to Michaelis-Menten equation
-    following Coello et al. (in prep.).
+    following Coello et al. (2022).
 }
 
 \value{
@@ -88,10 +88,11 @@
 }
 
 \references{
-    Coello, A.J, Heleno, R.H., Fernandez-Mazuecos, M. Vargas, P.
-    (in prep.).
-    PAICE: a novel method for Phylogeographic Analysis of Island
-    Colonization Events considering sampling effort.
+    Coello, A.J., Fernandez-Mazuecos, M., Heleno, R.H., Vargas, P. (2022).
+    PAICE: A new R package to estimate the number of inter-island colonizations
+    considering haplotype data and sample size. \emph{Journal of Biogeography},
+    49(4), 577-589.DOI:
+    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \seealso{

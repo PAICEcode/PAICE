@@ -57,7 +57,7 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
     calculated by using mean points for each value of the first resampling
     method (variable positions in the first estimation and populations in the
     second estimation). The asymptote is calculated by fitting the curve to a
-    Michaelis-Menten equation following Coello et al. (in prep.).
+    Michaelis-Menten equation following Coello et al. (2022).
 
     The confidence interval for the estimated number of colonization events is
     calculated with the \code{\link[stats]{confint}} function. Curve fitting is done using the \code{\link[stats]{nls}} function.
@@ -118,10 +118,11 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
 }
 
 \references{
-    Coello, A.J, Heleno, R.H., Fernandez-Mazuecos, M. Vargas, P.
-    (in prep.).
-    PAICE: a novel method for Phylogeographic Analysis of Island
-    Colonization Events considering sampling effort.
+    Coello, A.J., Fernandez-Mazuecos, M., Heleno, R.H., Vargas, P. (2022).
+    PAICE: A new R package to estimate the number of inter-island colonizations
+    considering haplotype data and sample size. \emph{Journal of Biogeography},
+    49(4), 577-589.DOI:
+    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \note{

@@ -11,7 +11,7 @@
 }
 
 \usage{
-geneticResample(data, network, position)
+geneticResampling(data, network, position)
 }
 
 \arguments{

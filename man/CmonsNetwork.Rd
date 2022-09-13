@@ -26,7 +26,7 @@ data("CmonsNetwork")
 }
 
 \details{
-    This dataset was taken from Coello et al. (2021). it was constructed using
+    This dataset was taken from Coello et al. (2021). It was constructed using
     three ptDNA regions and 37 populations from the Canarian archipelago.
 }
 

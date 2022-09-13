@@ -17,7 +17,7 @@
     positions) and field sampling (populations/individuals), this package also
     estimates the number of colonization events corrected by sampling effort.
     The method used in the \pkg{PAICE} package is described in Coello et al.
-    (in prep.).
+    (2022).
 }
 
 \section{PAICE functions}{
@@ -51,18 +51,19 @@
 
 \author{
     Alberto J. Coello,
-    Ruben H. Heleno,
-    Mario Fernandez-Mazuecos
+    Mario Fernandez-Mazuecos,
+    Ruben H. Heleno
     and Pablo Vargas
 
-    Maintainer: Alberto J. Coello <ajcoello@rjb.csic.es>
+    Maintainer: Alberto J. Coello <albjcoello@gmail.com>
 }
 
 \references{
-    Coello, A.J, Heleno, R.H., Fernandez-Mazuecos, M. Vargas, P.
-    (in prep.).
-    PAICE: a novel method for Phylogeographic Analysis of Island
-    Colonization Events considering sampling effort.
+    Coello, A.J., Fernandez-Mazuecos, M., Heleno, R.H., Vargas, P. (2022).
+    PAICE: A new R package to estimate the number of inter-island colonizations
+    considering haplotype data and sample size. \emph{Journal of Biogeography},
+    49(4), 577-589.DOI:
+    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 
