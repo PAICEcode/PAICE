@@ -5,8 +5,8 @@
 \title{Asymptotic estimation of the number of colonization events}
 
 \description{
-    This function calculates the asymptotic estimator of colonization events
-    from both curves generated using the {\link{rarecol}} function.
+    A calculation of asymptotic estimators of colonization events from both
+    curves generated using the {\link{rarecol}} function.
 }
 
 \usage{
@@ -122,7 +122,7 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \note{

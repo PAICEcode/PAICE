@@ -1,0 +1,19 @@
+CmonsData               Occurrence matrix of _Cistus monspeliensis_ in
+                        the Canary Islands
+CmonsNetwork            Genealogical relationship of _Cistus
+                        monspeliensis_ haplotypes
+CmonsRare               Simulated rarefaction curves of _Cistus
+                        monspeliensis_
+PAICE-package           Phylogeographic Analysis of Island Colonization
+                        Events
+colonization            Inference of minimum number of colonization
+                        events
+geneticResampling       Simulate genetic sampling effort reduction
+maxCol                  Asymptotic estimation of the number of
+                        colonization events
+plot.maxCol             Plot asymptotic estimators of colonization
+                        events
+plot.rarecol            Plot rarefaction curve of colonization events
+rarecol                 Rarefaction curve of colonization events
+read.rarecol            Read files containing rarefaction curves of
+                        colonization events

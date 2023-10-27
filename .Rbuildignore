@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+NEWS.Rd
+PAICE_1.0.0.pdf
+PAICE_1.0.0.tar.gz
+images
+^README\.md$

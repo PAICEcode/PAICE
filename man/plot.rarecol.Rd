@@ -5,13 +5,12 @@
 \title{Plot rarefaction curve of colonization events}
 
 \description{
-  This fucntion plots rarefaction curves produced by \code{\link{rarecol}}.
+  Plots for the rarefaction curves produced by \code{\link{rarecol}}.
 }
 \usage{
-\method{plot}{rarecol}
-(x, xlim1, xlim2, ylim, ylim1, ylim2, palette1, palette2, main1,
+\method{plot}{rarecol}(x, xlim1, xlim2, ylim, ylim1, ylim2, palette1, palette2, main1,
     main2, xlab1, xlab2, ylab1, ylab2, las1 = 1, las2 = 1,
-    cextText = 0.75, legendbar = TRUE, ...)
+    cextText = 0.75, legendbar = TRUE, \dots)
 }
 
 \arguments{
@@ -53,7 +52,7 @@
     logical. If \code{TRUE}, it shows a legend bar indicating the color value of
     each variable position.
     }
-    \item{...}{
+    \item{\dots}{
         aditional graphical parameters (see \code{\link[graphics]{par}}) for
         additional information.
     }
@@ -86,7 +85,7 @@
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \seealso{

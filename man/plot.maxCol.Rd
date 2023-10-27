@@ -5,18 +5,17 @@
 \title{Plot asymptotic estimators of colonization events}
 
 \description{
-    This function plots the estimators calculated by \code{\link{maxCol}}.
+    Plots for the estimators calculated by \code{\link{maxCol}}.
 }
 
 \usage{
-\method{plot}{maxcol}
-(object, xlim, ylim, col, xlabbotton, xlabtop, ylab, main,
+\method{plot}{maxCol}(x, xlim, ylim, col, xlabbotton, xlabtop, ylab, main,
      pch = 16, lty = 1, lwd = 2, cex = 1, estimation = TRUE,
-     legend = TRUE, ...)
+     legend = TRUE, \dots)
 }
 
 \arguments{
-    \item{object}{
+    \item{x}{
         an object of \code{\link[base]{class}} \code{"maxCol"} returned by
         \code{\link{maxCol}} function.
     }
@@ -65,7 +64,7 @@
     \item{legend}{
         logial. If it is \code{TRUE} the legend is added.
     }
-    \item{...}{
+    \item{\dots}{
         aditional graphical parameters (see \code{\link[graphics]{par}}) for
         aditional information.
     }
@@ -92,7 +91,7 @@
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \seealso{
