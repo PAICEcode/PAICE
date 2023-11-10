@@ -88,7 +88,7 @@ rarecol(data, network, replicates_field = 10,
     \code{\link{read.rarecol}} to import files generated from this function.
 }
 
-\examples{
+\examples{\donttest{
 data(CmonsData)
 data(CmonsNetwork)
 # Build rarefaction curves with 5 field and genetic replicates
@@ -100,6 +100,6 @@ rcol <- rarecol(data = CmonsData, network = CmonsNetwork,
                 monitor = TRUE, mode = c(1, 2))
 par(mfrow = c(1, 2))
 plot(rcol) # Plotting results
-}
+}}
 
 \keyword{ datagen }

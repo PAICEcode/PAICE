@@ -91,11 +91,11 @@
 \seealso{
     \code{\link{rarecol}} to build a rarefection curve of colonization events.
 }
-\examples{
+\examples{\donttest{
 # Use 'CmonsRare' data, a dataset generated using 25 replicates
 # in both genetic and field sampling
 data(CmonsRare)
 plot(CmonsRare)
-}
+}}
 
 \keyword{ aplot }

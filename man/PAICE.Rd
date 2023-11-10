@@ -67,7 +67,7 @@
 }
 
 
-\examples{
+\examples{\donttest{
 # Inference of minimum number of inter-island colonization events
 data(CmonsData)
 data(CmonsNetwork)
@@ -77,12 +77,11 @@ summary(col)
 
 # Asumptotic estimators of colonization events
 # 25 replicates used in each sampling variable
-## Note: The code is commented because 'CmonsRare' exists as an example
-#set.seed(31)
-#CmonsRare <- rarecol(data = CmonsData, network = CmonsNetwork,
-#    replicates_field = 25, replicates_genetic = 25, monitor = TRUE,
-#    mode = c(1, 2))
-maxcol <- maxCol(data = CmonsRare, level = 0.95, del = 0.5, method = 1)
+set.seed(31)
+CmonsRare <- rarecol(data = CmonsData, network = CmonsNetwork,
+    replicates_field = 25, replicates_genetic = 25, monitor = TRUE,
+    mode = c(1, 2))
+maxcol <- maxCol(data = CmonsRare)
 maxcol
 summary(maxcol)
 
@@ -91,6 +90,6 @@ par(mfrow = c(2, 2))
 plot(CmonsRare)
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol)
-}
+}}
 
 \keyword{ package }

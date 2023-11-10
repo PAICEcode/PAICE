@@ -15,15 +15,15 @@ plot.maxCol <- function(x, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                         main, pch = 16, lty = 1, lwd = 2, cex = 1,
                         estimation = TRUE, legend = TRUE, ...) {
     if (is.numeric(x$ParametersGen)) {
-        f_gen <- function(x) x$ParametersGen[1, 1] * x /
-                             (x$ParametersGen[2, 1] + x) +
+        f_gen <- function(a) x$ParametersGen[1, 1] * a /
+                             (x$ParametersGen[2, 1] + a) +
                              x$ParametersGen[3, 1]
     } else {
         f_gen <- NULL
     }
     if (is.numeric(x$ParametersField)) {
-        f_field <- function(x) x$ParametersField[1, 1] * (x - 1) /
-                               (x$ParametersField[2, 1] + x - 1)
+        f_field <- function(a) x$ParametersField[1, 1] * (a - 1) /
+                               (x$ParametersField[2, 1] + a - 1)
     } else {
         f_field <- NULL
     }

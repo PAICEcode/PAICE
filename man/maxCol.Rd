@@ -136,7 +136,7 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
     case use the function \code{\link{colonization}}. \code{\link{plot.maxCol}}
     to plot the result of this function.
 }
-\examples{
+\examples{\donttest{
 # Use 'CmonsRare' data, a dataset generated using 25 replicates
 # in both genetic and field sampling
 data(CmonsRare)
@@ -149,5 +149,5 @@ par(mfrow = c(2, 2))
 plot(CmonsRare) # First two plots with rarefaction curves
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol) # Third plot with estimations
-}
+}}
 \keyword{ univar }

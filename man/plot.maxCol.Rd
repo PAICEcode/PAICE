@@ -99,11 +99,11 @@
     and estimate the number of colonization events.
 }
 
-\examples{
+\examples{\donttest{
 # Use 'CmonsRare' data, a dataset generated using 25 replicates
 # in both genetic and field sampling
 data(CmonsRare)
 maxcol <- maxCol(data = CmonsRare)
 plot(maxcol)
-}
+}}
 \keyword{ aplot }

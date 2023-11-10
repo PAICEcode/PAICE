@@ -1,8 +1,8 @@
 citHeader("To cite 'PAiCE' in publications use:")
 
-citEntry(entry = "Article",
+bibentry(bibtype = "Article",
   title        = "PAICE: A new R package to estimate the number of inter-island colonizations considering haplotype data and sample size",
-  author       = personList(as.person("Alberto J. Coello"),
+  author       = c(as.person("Alberto J. Coello"),
                    as.person("Mario Fernandez-Mazuecos"),
                    as.person("Ruben H. Heleno"),
                    as.person("Pablo Vargas")),

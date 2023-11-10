@@ -42,7 +42,7 @@ read.rarecol(gen, field)
     events.
 }
 
-\examples{
+\examples{\donttest{
 data(CmonsData)
 data(CmonsNetwork)
 # Make rarefaction curves and save it in working directory,
@@ -56,6 +56,6 @@ raredata <- read.rarecol(gen = "rareData_gen.csv",
 str(raredata) # Show structure of data imported
 # Remove files created
 file.remove("rareData_gen.csv", "rareData_field.csv")
-}
+}}
 
 \keyword{ file }
