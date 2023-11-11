@@ -1,4 +1,4 @@
-PAICE v1.0.2 (Release date: 2023-10-27)
+PAICE v1.0.1 (Release date: 2023-11-11)
 ================
 
 Minor changes for CRAN compatibility

@@ -14,6 +14,10 @@
 plot.maxCol <- function(x, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                         main, pch = 16, lty = 1, lwd = 2, cex = 1,
                         estimation = TRUE, legend = TRUE, ...) {
+    ## Save previous par options for exit
+    oldpar <- par(no.readonly = TRUE)
+    on.exit(par(oldpar))
+    
     if (is.numeric(x$ParametersGen)) {
         f_gen <- function(a) x$ParametersGen[1, 1] * a /
                              (x$ParametersGen[2, 1] + a) +

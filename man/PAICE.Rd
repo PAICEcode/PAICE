@@ -86,10 +86,12 @@ maxcol
 summary(maxcol)
 
 # Plotting results
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(2, 2))
 plot(CmonsRare)
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol)
+par(old.par)
 }}
 
 \keyword{ package }

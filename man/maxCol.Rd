@@ -145,9 +145,11 @@ maxcol # Number of colonization estimated in each curve
 summary(maxcol) # Description of curves
 plot(maxcol) # Plotting estimations
 # Plot all the information
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(2, 2))
 plot(CmonsRare) # First two plots with rarefaction curves
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol) # Third plot with estimations
+par(old.par)
 }}
 \keyword{ univar }

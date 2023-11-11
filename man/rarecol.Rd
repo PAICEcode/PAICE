@@ -98,8 +98,10 @@ data(CmonsNetwork)
 rcol <- rarecol(data = CmonsData, network = CmonsNetwork,
                 replicates_field = 5, replicates_genetic = 5,
                 monitor = TRUE, mode = c(1, 2))
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(1, 2))
 plot(rcol) # Plotting results
+par(old.par)
 }}
 
 \keyword{ datagen }
