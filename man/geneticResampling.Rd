@@ -5,9 +5,8 @@
 \title{Simulate genetic sampling effort reduction}
 
 \description{
-    This function reduces the resolution of the genealogy by supressing a
-    variable position in the genealogy. It simulates a lower level of genetic
-    sampling.
+    A reduction of the resolution of the genealogy by supressing a variable
+    position in the genealogy. It simulates a lower level of genetic sampling.
 }
 
 \usage{

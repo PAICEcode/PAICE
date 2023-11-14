@@ -5,8 +5,8 @@
 \title{Asymptotic estimation of the number of colonization events}
 
 \description{
-    This function calculates the asymptotic estimator of colonization events
-    from both curves generated using the {\link{rarecol}} function.
+    A calculation of asymptotic estimators of colonization events from both
+    curves generated using the {\link{rarecol}} function.
 }
 
 \usage{
@@ -122,7 +122,7 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \note{
@@ -136,7 +136,7 @@ maxCol(data, level = 0.95, del = 0.05, method = 1)
     case use the function \code{\link{colonization}}. \code{\link{plot.maxCol}}
     to plot the result of this function.
 }
-\examples{
+\examples{\donttest{
 # Use 'CmonsRare' data, a dataset generated using 25 replicates
 # in both genetic and field sampling
 data(CmonsRare)
@@ -145,9 +145,11 @@ maxcol # Number of colonization estimated in each curve
 summary(maxcol) # Description of curves
 plot(maxcol) # Plotting estimations
 # Plot all the information
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(2, 2))
 plot(CmonsRare) # First two plots with rarefaction curves
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol) # Third plot with estimations
-}
+par(old.par)
+}}
 \keyword{ univar }

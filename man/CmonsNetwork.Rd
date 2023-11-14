@@ -37,7 +37,7 @@ data("CmonsNetwork")
     Quaternary history of the Mediterranean-Canarian \emph{Cistus monspeliensis}
     (Cistaceae).
     \emph{Journal of Systematics and Evolution, 59(2)}, 262-277.
-    DOI: \href{https://doi.org/10.1111/jse.12570}{10.1111/jse.12570}
+    DOI: \href{https://onlinelibrary.wiley.com/doi/10.1111/jse.12570}{10.1111/jse.12570}
 }
 \examples{
 data(CmonsNetwork)

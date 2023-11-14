@@ -11,19 +11,23 @@
 #' @importFrom graphics points
 #' @importFrom graphics rect
 #' @importFrom graphics title
-plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
+plot.maxCol <- function(x, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                         main, pch = 16, lty = 1, lwd = 2, cex = 1,
                         estimation = TRUE, legend = TRUE, ...) {
-    if (is.numeric(object$ParametersGen)) {
-        f_gen <- function(x) object$ParametersGen[1, 1] * x /
-                             (object$ParametersGen[2, 1] + x) +
-                             object$ParametersGen[3, 1]
+    ## Save previous par options for exit
+    oldpar <- par(no.readonly = TRUE)
+    on.exit(par(oldpar))
+    
+    if (is.numeric(x$ParametersGen)) {
+        f_gen <- function(a) x$ParametersGen[1, 1] * a /
+                             (x$ParametersGen[2, 1] + a) +
+                             x$ParametersGen[3, 1]
     } else {
         f_gen <- NULL
     }
-    if (is.numeric(object$ParametersField)) {
-        f_field <- function(x) object$ParametersField[1, 1] * (x - 1) /
-                               (object$ParametersField[2, 1] + x - 1)
+    if (is.numeric(x$ParametersField)) {
+        f_field <- function(a) x$ParametersField[1, 1] * (a - 1) /
+                               (x$ParametersField[2, 1] + a - 1)
     } else {
         f_field <- NULL
     }
@@ -34,7 +38,7 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
         xlabbotton <- "Variable positions"
     }
     if (missing(xlabtop)) {
-        if (names(object$DataField)[2] == "populations") {
+        if (names(x$DataField)[2] == "populations") {
             xlabtop <- "Populations"
         } else {
             xlabtop <- "Individuals"
@@ -45,19 +49,19 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
     }
     if (missing(xlim)) {
         if (estimation == TRUE) {
-            xlim <- c(0, max(object$DataGen$positions,
-                             object$DataField[[2]] * 1.2))
+            xlim <- c(0, max(x$DataGen$positions,
+                             x$DataField[[2]] * 1.2))
         } else {
-            xlim <- c(0, max(object$DataGen$positions, object$DataField[[2]]))
+            xlim <- c(0, max(x$DataGen$positions, x$DataField[[2]]))
         }
     }
     if (missing(ylim)) {
-        if (estimation == TRUE & is.numeric(object$Summary)) {
-            ylim <- c(0, max(object$Summary,
+        if (estimation == TRUE & is.numeric(x$Summary)) {
+            ylim <- c(0, max(x$Summary,
                              na.rm = TRUE) * 1.1)
         } else {
-            ylim <- c(0, max(object$DataGen$colonization,
-                             object$DataField$colonization,
+            ylim <- c(0, max(x$DataGen$colonization,
+                             x$DataField$colonization,
                              na.rm = TRUE))
         }
     }
@@ -82,8 +86,8 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
          pos       = ylim[1] - (ylim[2] - ylim[1]) * 0.04,
          labels    = TRUE,
          las       = 1,
-         at        = round(seq(from       = min(object$DataGen[[2]]),
-                               to         = max(object$DataGen[[2]]),
+         at        = round(seq(from       = min(x$DataGen[[2]]),
+                               to         = max(x$DataGen[[2]]),
                                length.out = 4)),
          col.axis  = col[1],
          col.ticks = col[1])
@@ -95,8 +99,8 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
          pos       = ylim[2] + (ylim[2] - ylim[1]) * 0.04,
          labels    = TRUE,
          las       = 1,
-         at        = round(seq(from       = min(object$DataField[[2]]),
-                               to         = max(object$DataField[[2]]),
+         at        = round(seq(from       = min(x$DataField[[2]]),
+                               to         = max(x$DataField[[2]]),
                                length.out = 4)),
          col.axis  = col[2],
          col.ticks = col[2])
@@ -147,29 +151,29 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
          side = 3,
          line = 2.5,
          col  = col[2])
-    points(x   = object$DataGen[[2]],
-          y   = object$DataGen[[1]],
+    points(x   = x$DataGen[[2]],
+          y   = x$DataGen[[1]],
           pch = pch,
           col = col[1],
           cex = cex)
     if(is.null(f_gen) == FALSE) {
             curve(f_gen,
              from = 0,
-             to   = max(object$DataGen[[2]]),
+             to   = max(x$DataGen[[2]]),
              col  = col[1],
              lty  = lty,
              lwd  = lwd,
              add  = TRUE)
     }
-    points(x   = object$DataField[[2]],
-           y   = object$DataField[[1]],
+    points(x   = x$DataField[[2]],
+           y   = x$DataField[[1]],
            pch = pch,
            col = col[2],
            cex = cex)
     if(is.null(f_field) == FALSE) {
         curve(f_field,
              from = 1,
-             to   = max(object$DataField[[2]]),
+             to   = max(x$DataField[[2]]),
              col  = col[2],
              lty  = lty,
              lwd  = lwd,
@@ -177,17 +181,17 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
     }
 
 
-    if(estimation == TRUE & is.numeric(object$Summary)) {
+    if(estimation == TRUE & is.numeric(x$Summary)) {
         points(x   = xlim[2] * 0.9583,
-              y   = object$Summary[1, 1],
+              y   = x$Summary[1, 1],
               col = col[1],
               pch = 16,
               cex = cex)
-        if(is.na(object$Summary[1, 2])) {
+        if(is.na(x$Summary[1, 2])) {
             arrows(x0     = xlim[2] * 0.9583,
                   y0     = ylim[1],
                   x1     = xlim[2] * 0.9583,
-                  y1     = object$Summary[1, 1],
+                  y1     = x$Summary[1, 1],
                   length = 0.1,
                   angle  = 30,
                   lwd    = lwd,
@@ -196,9 +200,9 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   col    = col[1])
         } else {
             arrows(x0     = xlim[2] * 0.9583,
-                  y0     = object$Summary[1, 2],
+                  y0     = x$Summary[1, 2],
                   x1     = xlim[2] * 0.9583,
-                  y1     = object$Summary[1, 1],
+                  y1     = x$Summary[1, 1],
                   length = 0.1,
                   angle  = 90,
                   lwd    = lwd,
@@ -206,11 +210,11 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   code   = 1,
                   col    = col[1])
         }
-        if(is.na(object$Summary[1, 3])) {
+        if(is.na(x$Summary[1, 3])) {
             arrows(x0     = xlim[2] * 0.9583,
               y0     = ylim[2],
               x1     = xlim[2] * 0.9583,
-              y1     = object$Summary[1, 1],
+              y1     = x$Summary[1, 1],
               length = 0.1,
               angle  = 30,
               lwd    = lwd,
@@ -219,9 +223,9 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
               col    = col[1])
         } else {
             arrows(x0     = xlim[2] * 0.9583,
-                  y0     = object$Summary[1, 3],
+                  y0     = x$Summary[1, 3],
                   x1     = xlim[2] * 0.9583,
-                  y1     = object$Summary[1, 1],
+                  y1     = x$Summary[1, 1],
                   length = 0.1,
                   angle  = 90,
                   lwd    = lwd,
@@ -230,15 +234,15 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   col    = col[1])
         }
         points(x   = xlim[2],
-              y   = object$Summary[2, 1],
+              y   = x$Summary[2, 1],
               col = col[2],
               pch = 16,
               cex = cex)
-        if(is.na(object$Summary[2, 2])) {
+        if(is.na(x$Summary[2, 2])) {
             arrows(x0     = xlim[2],
                   y0     = ylim[1],
                   x1     = xlim[2],
-                  y1     = object$Summary[2, 1],
+                  y1     = x$Summary[2, 1],
                   length = 0.1,
                   angle  = 30,
                   lwd    = lwd,
@@ -247,9 +251,9 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   col    = col[2])
         } else {
             arrows(x0     = xlim[2],
-                  y0     = object$Summary[2, 2],
+                  y0     = x$Summary[2, 2],
                   x1     = xlim[2],
-                  y1     = object$Summary[2, 1],
+                  y1     = x$Summary[2, 1],
                   length = 0.1,
                   angle  = 90,
                   lwd    = lwd,
@@ -257,11 +261,11 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   code   = 1,
                   col    = col[2])
         }
-        if(is.na(object$Summary[2, 3])) {
+        if(is.na(x$Summary[2, 3])) {
             arrows(x0     = xlim[2],
                   y0     = ylim[2],
                   x1     = xlim[2],
-                  y1     = object$Summary[2, 1],
+                  y1     = x$Summary[2, 1],
                   length = 0.1,
                   angle  = 30,
                   lwd    = lwd,
@@ -270,9 +274,9 @@ plot.maxCol <- function(object, xlim, ylim, col, xlabbotton, xlabtop, ylab,
                   col    = col[2])
         } else {
             arrows(x0     = xlim[2],
-                  y0     = object$Summary[2, 3],
+                  y0     = x$Summary[2, 3],
                   x1     = xlim[2],
-                  y1     = object$Summary[2, 1],
+                  y1     = x$Summary[2, 1],
                   length = 0.1,
                   angle  = 90,
                   lwd    = lwd,

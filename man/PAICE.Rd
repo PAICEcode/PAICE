@@ -10,14 +10,14 @@
     systems.
 }
 \details{
-    This package is able to infer inter-island colonization events in an
+    Estimation of the number of infer inter-island colonization events in an
     island-like system by analyzing the geographic distribution of uniparentally
     inherited haplotypes and their genealogical relationships. Furthermore, by
     building rarefaction curves based on both genetic sampling (variable
-    positions) and field sampling (populations/individuals), this package also
-    estimates the number of colonization events corrected by sampling effort.
-    The method used in the \pkg{PAICE} package is described in Coello et al.
-    (2022).
+    positions) and field sampling (populations/individuals), an estimation of
+    the number of colonization events corrected by sampling effort could be
+    done. The method used in the \pkg{PAICE} package is described in Coello et
+    al. (2022).
 }
 
 \section{PAICE functions}{
@@ -63,11 +63,11 @@
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 
-\examples{
+\examples{\donttest{
 # Inference of minimum number of inter-island colonization events
 data(CmonsData)
 data(CmonsNetwork)
@@ -77,18 +77,21 @@ summary(col)
 
 # Asumptotic estimators of colonization events
 # 25 replicates used in each sampling variable
-rare <- rarecol(data = CmonsData, network = CmonsNetwork,
+set.seed(31)
+CmonsRare <- rarecol(data = CmonsData, network = CmonsNetwork,
     replicates_field = 25, replicates_genetic = 25, monitor = TRUE,
     mode = c(1, 2))
-maxcol <- maxCol(data = rare, level = 0.95, del = 0.5, method = 1)
+maxcol <- maxCol(data = CmonsRare)
 maxcol
 summary(maxcol)
 
 # Plotting results
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(2, 2))
-plot(rare)
+plot(CmonsRare)
 par(fig = c(0, 1, 0, 0.5), new = TRUE)
 plot(maxcol)
-}
+par(old.par)
+}}
 
 \keyword{ package }

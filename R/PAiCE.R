@@ -1,6 +1,6 @@
-#' PAiCE: Phylogeographic Analysis of Colonization Events
+#' PAICE: Phylogeographic Analysis of Colonization Events
 #'
-#' PAiCE package has three main functions:
+#' PAICE package has three main functions:
 #' colonizations, rarecol and maxCol
 #'
 #' @section Foo functions:

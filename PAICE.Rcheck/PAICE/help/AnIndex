@@ -1,0 +1,12 @@
+PAICE-package	PAICE
+CmonsData	CmonsData
+CmonsNetwork	CmonsNetwork
+CmonsRare	CmonsRare
+colonization	colonizations
+geneticResampling	geneticResampling
+maxCol	maxCol
+PAICE	PAICE
+plot.maxCol	plot.maxCol
+plot.rarecol	plot.rarecol
+rarecol	rarecol
+read.rarecol	read.rarecol

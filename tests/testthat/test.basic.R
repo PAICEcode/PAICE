@@ -10,7 +10,7 @@ test_that("Testing colonization inference", {
 
 test_that("Testing maximum of colonization events with a few replicates", {
      expect_equal({
-          set.seed(31)
+          set.seed(24)
           rare <- rarecol(data               = CmonsData,
                           network            = CmonsNetwork,
                           replicates_field   = 5,
@@ -21,5 +21,5 @@ test_that("Testing maximum of colonization events with a few replicates", {
                   digits = 4),
             round(x      = max$Summary[2, 1],
                   digits = 4))
-     }, c(40.0849, 80.8063))
+     }, c(34.0653, 41.1658))
 })

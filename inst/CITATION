@@ -1,8 +1,8 @@
 citHeader("To cite 'PAiCE' in publications use:")
 
-citEntry(entry = "Article",
+bibentry(bibtype = "Article",
   title        = "PAICE: A new R package to estimate the number of inter-island colonizations considering haplotype data and sample size",
-  author       = personList(as.person("Alberto J. Coello"),
+  author       = c(as.person("Alberto J. Coello"),
                    as.person("Mario Fernandez-Mazuecos"),
                    as.person("Ruben H. Heleno"),
                    as.person("Pablo Vargas")),
@@ -11,11 +11,12 @@ citEntry(entry = "Article",
   volume       = "49",
   number       = "4",
   pages        = "577-589",
-  url          = "https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341",
-
+  url          = "https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341",
+  doi          = "10.1111/jbi.14341",
+  
   textVersion  =
   paste("Alberto J. Coello, Mario Fernandez-Mazuecos, Ruben H. Heleno, Pablo Vargas (2022).",
         "PAICE: A new R package to estimate the number of inter-island colonizations considering haplotype data and sample size",
         "Journal of Biogeography, 49(4), 577-589.",
-        "https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341")
+        "https://doi.org/10.1111/jbi.14341")
 )

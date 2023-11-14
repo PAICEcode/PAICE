@@ -9,8 +9,8 @@
 #' @importFrom grDevices palette
 #' @importFrom stats aggregate
 plot.rarecol <- function(x, xlim1, xlim2, ylim, ylim1, ylim2, palette1,
-                         palette2, main1, xlab1, ylab1, main2, xlab2, ylab2,
-                         cextText = 0.75, las1 = 1, las2 = 1,
+                         palette2, main1, main2, xlab1, xlab2, ylab1, ylab2,
+                         las1 = 1, las2 = 1, cextText = 0.75,
                          legendbar = TRUE, ...) {
 
     # Prepare genetic curves data

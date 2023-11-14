@@ -1,5 +1,5 @@
 #' @export
-summary.colonization <- function(object) {
+summary.colonization <- function(object, ...) {
     cat("Summary of data used:",
         sep = "\n")
     print(object$Summary)

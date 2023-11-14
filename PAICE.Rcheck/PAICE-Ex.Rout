@@ -1,0 +1,292 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "PAICE"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('PAICE')
+PAICE 1.0.0
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("CmonsData")
+> ### * CmonsData
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: CmonsData
+> ### Title: Occurrence matrix of _Cistus monspeliensis_ in the Canary
+> ###   Islands
+> ### Aliases: CmonsData
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(CmonsData)
+> CmonsData # Show data frame
+           isla           population c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13
+1     El Hierro         FalMonTenaca  0  0  0  0  1  0  0  0  0   0   0   0   0
+2     El Hierro           LaFrontera  0  0  0  0  1  0  0  0  0   0   0   0   0
+3     El Hierro               LaPena  0  0  0  0  3  0  0  0  0   0   0   0   0
+4     El Hierro             Valverde  0  0  0  0  0  0  0  1  0   0   0   0   2
+5  Gran Canaria             Artenara  0  0  0  0  1  0  0  0  1   0   0   0   1
+6  Gran Canaria                 C605  0  0  0  0  0  0  0  0  0   0   0   2   1
+7  Gran Canaria                Mogan  0  0  0  0  0  0  0  0  2   0   0   0   0
+8  Gran Canaria          MteHelechal  0  0  0  0  0  0  0  0  3   0   0   0   0
+9  Gran Canaria      RoqueChoDomingo  0  0  0  0  0  0  0  0  2   0   0   1   0
+10 Gran Canaria           RoqueNublo  0  0  0  0  0  0  0  0  2   0   0   0   1
+11 Gran Canaria           SBTirajana  0  0  0  0  0  0  0  0  3   0   0   0   0
+12 Gran Canaria     SBTirajanaCarlos  0  0  0  0  0  0  1  0  1   0   0   0   0
+13 Gran Canaria                Tirma  0  0  0  0  0  0  0  0  1   0   1   0   0
+14    La Gomera                Aluce  0  0  0  0  0  0  0  0  0   0   0   0   3
+15    La Gomera                Arure  0  0  0  0  0  0  0  0  0   0   1   0   0
+16    La Gomera          ArureCarlos  0  0  0  0  1  0  0  0  0   0   1   0   1
+17    La Gomera            Garajonay  0  0  0  0  0  0  0  0  0   0   0   0   3
+18    La Gomera              Jaragan  0  0  0  0  0  0  0  0  0   0   0   0   2
+19    La Gomera          RoqueAgando  0  0  0  0  0  1  0  0  0   0   1   0   1
+20     La Palma           Barlovento  0  3  0  0  0  0  0  0  0   0   0   0   0
+21     La Palma       BarrancoGarome  0  2  1  0  0  0  0  0  0   0   0   0   0
+22     La Palma         BarrancoSeco  0  0  3  0  0  0  0  0  0   0   0   0   0
+23     La Palma         Fuencaliente  0  0  3  0  0  0  0  0  0   0   0   0   0
+24     La Palma              LaTosca  0  3  0  0  0  0  0  0  0   0   0   0   0
+25     La Palma            LosLlanos  0  2  1  0  0  0  0  0  0   0   0   0   0
+26     La Palma             Tijarafe  0  0  0  1  0  0  0  0  0   0   0   0   0
+27     La Palma            VillaMazo  0  1  0  0  0  0  0  0  0   0   0   0   0
+28     Tenerife            Aguamansa  0  0  0  0  0  0  0  0  0   0   0   0   1
+29     Tenerife       BarrancoAnimas  0  0  0  0  1  0  0  0  0   0   0   0   0
+30     Tenerife               BcoRey  0  0  0  0  0  0  0  0  0   0   2   0   0
+31     Tenerife                Erjos  0  0  0  0  1  0  0  0  0   1   0   0   0
+32     Tenerife               Guimar  0  0  0  0  0  0  0  0  0   0   0   0   3
+33     Tenerife       IguesteSAndres  3  0  0  0  0  0  0  0  0   0   0   0   0
+34     Tenerife IguesteSAndresCarlos  1  0  0  0  0  0  0  0  0   0   0   0   0
+35     Tenerife          SubidaTeide  0  0  0  0  0  0  0  0  1   0   0   0   0
+36     Tenerife             Vilaflor  0  0  0  0  0  0  0  0  0   0   1   0   0
+37     Tenerife           VillaArico  0  0  0  0  0  2  0  0  0   0   1   0   0
+   c14 c15 c16 m1 m2
+1    0   0   0  0  0
+2    0   0   0  0  0
+3    0   0   0  0  0
+4    0   0   0  0  0
+5    0   0   0  0  0
+6    0   0   0  0  0
+7    0   0   0  0  0
+8    0   0   0  0  0
+9    0   0   0  0  0
+10   0   0   0  0  0
+11   0   0   0  0  0
+12   0   0   0  0  0
+13   0   0   0  0  0
+14   0   0   0  0  0
+15   0   2   0  0  0
+16   0   0   0  0  0
+17   0   0   0  0  0
+18   0   0   0  0  0
+19   0   0   0  0  0
+20   0   0   0  0  0
+21   0   0   0  0  0
+22   0   0   0  0  0
+23   0   0   0  0  0
+24   0   0   0  0  0
+25   0   0   0  0  0
+26   0   0   0  0  0
+27   0   0   0  0  0
+28   0   0   0  0  0
+29   0   0   0  0  0
+30   0   0   1  0  0
+31   0   0   0  0  0
+32   0   0   0  0  0
+33   0   0   0  0  0
+34   0   0   0  0  0
+35   0   0   0  0  0
+36   1   1   0  0  0
+37   0   0   0  0  0
+> 
+> 
+> 
+> cleanEx()
+> nameEx("CmonsNetwork")
+> ### * CmonsNetwork
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: CmonsNetwork
+> ### Title: Genealogical relationship of _Cistus monspeliensis_ haplotypes
+> ### Aliases: CmonsNetwork
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(CmonsNetwork)
+> CmonsNetwork # Show data frame
+   haplotype ancestral change_position
+1         c1       OUT            1576
+2         c2        m1            1398
+3         c3        c2             752
+4         c4        c2             462
+5         c5        c1            1322
+6         c6        c5             831
+7         c7        c6            1770
+8         c8        c5             549
+9         c9        c1             714
+10       c10        c9             984
+11       c11        c9             478
+12       c12        m2             462
+13       c13        m2            1105
+14       c14       c13             498
+15       c15       c13               3
+16       c16       c13            1147
+17        m1        c1             862
+18        m2        c9             376
+> 
+> 
+> 
+> cleanEx()
+> nameEx("CmonsRare")
+> ### * CmonsRare
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: CmonsRare
+> ### Title: Simulated rarefaction curves of _Cistus monspeliensis_
+> ### Aliases: CmonsRare
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(CmonsRare)
+> str(CmonsRare) # Structure of data
+List of 2
+ $ finaldataGen  :'data.frame':	416250 obs. of  5 variables:
+  ..$ Populations            : int [1:416250] 1 2 3 4 5 6 7 8 9 10 ...
+  ..$ Individuals            : int [1:416250] 3 5 8 11 12 15 18 19 20 22 ...
+  ..$ TotalColonizationEvents: num [1:416250] 0 1 1 1 2 3 4 5 6 6 ...
+  ..$ VariablePositions      : int [1:416250] 17 17 17 17 17 17 17 17 17 17 ...
+  ..$ GeneticReplicate       : int [1:416250] 1 1 1 1 1 1 1 1 1 1 ...
+ $ finaldataField:'data.frame':	416250 obs. of  5 variables:
+  ..$ Populations            : int [1:416250] 37 37 37 37 37 37 37 37 37 37 ...
+  ..$ Individuals            : int [1:416250] 90 90 90 90 90 90 90 90 90 90 ...
+  ..$ TotalColonizationEvents: num [1:416250] 13 13 13 13 13 12 10 10 10 10 ...
+  ..$ VariablePositions      : int [1:416250] 17 16 15 14 13 12 11 10 9 8 ...
+  ..$ FieldReplicate         : int [1:416250] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "class")= chr "rarecol"
+> 
+> 
+> 
+> cleanEx()
+> nameEx("PAICE")
+> ### * PAICE
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: PAICE-package
+> ### Title: Phylogeographic Analysis of Island Colonization Events
+> ### Aliases: PAICE PAICE-package
+> ### Keywords: package
+> 
+> ### ** Examples
+> 
+> # Inference of minimum number of inter-island colonization events
+> data(CmonsData)
+> data(CmonsNetwork)
+> col <- colonization(data = CmonsData, network = CmonsNetwork)
+> col
+Total of inferred colonization events
+13
+> summary(col)
+Summary of data used:
+            Total
+Islands         5
+Populations    37
+Individuals    90
+Haplotypes     16
+
+Inference of colonization events: c = c1 + c2 + c3
+
+Colonization events by haplotype:
+    c1 c2 c3
+OUT  0  0  0
+c1   0  0  0
+c2   0  1  0
+c3   0  0  0
+c4   0  0  0
+c5   3  0  0
+c6   1  0  0
+c7   0  1  0
+c8   0  0  0
+c9   1  0  0
+c10  0  0  0
+c11  2  0  0
+c12  0  0  0
+c13  3  0  0
+c14  0  0  0
+c15  1  0  0
+c16  0  0  0
+
+Colonization events by type:
+c1 c2 c3 
+11  2  0 
+
+Total of colonization events inferred:
+c = 13 colonization events
+> 
+> # Asumptotic estimators of colonization events
+> # 25 replicates used in each sampling variable
+> ## Note: The code is commented because 'CmonsRare' exists as an example
+> #set.seed(31)
+> #CmonsRare <- rarecol(data = CmonsData, network = CmonsNetwork,
+> #    replicates_field = 25, replicates_genetic = 25, monitor = TRUE,
+> #    mode = c(1, 2))
+> maxcol <- maxCol(data = CmonsRare, level = 0.95, del = 0.5, method = 1)
+Waiting for profiling to be done...
+Waiting for profiling to be done...
+> maxcol
+Maximum of estimated colonization events:
+                      Mean      Min      Max
+Genetic estimator 36.94346 31.62768 45.40657
+Field estimator   26.22016 23.63377 29.59296
+
+Minimum and maximum determined by a interval of conficende of 95%
+> summary(maxcol)
+Final curve of colonization events in genetic estimator
+Formula: c = m * positons / (k + positions) + c0
+        mean       min       max
+m  32.677378 28.069277 40.452429
+k  18.236241 13.238361 26.863181
+c0  4.266078  3.558404  4.954138
+
+Final curve of colonization events in field estimator
+Formula: c = m * (populations - 1) / (k + populations - 1)
+      mean      min      max
+m 26.22016 23.63377 29.59296
+k 16.22950 12.60548 21.13326
+
+Interval of conficende of 95%
+
+Deleted the 50 % of extreme values
+> 
+> # Plotting results
+> par(mfrow = c(2, 2))
+> plot(CmonsRare)
+> par(fig = c(0, 1, 0, 0.5), new = TRUE)
+> plot(maxcol)
+Error: $ operator is invalid for atomic vectors
+Execution halted

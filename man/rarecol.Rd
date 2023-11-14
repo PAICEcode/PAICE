@@ -6,15 +6,15 @@
 \title{Rarefaction curve of colonization events}
 
 \description{
-    This function builds rarefaction curves considering both genetic and field
-    data. First, the function samples variable positions and then samples
-    populations for each variable position. Second, it samples populations and
-    then samples variable positions for each population.
+    A creation of rarefaction curves considering both genetic and field data.
+    First, the function samples variable positions and then samples populations
+    for each variable position. Second, it samples populations and then samples
+    variable positions for each population.
 }
 
 \usage{
 rarecol(data, network, replicates_field = 10,
-        replicates_genetic = 10, monitor = TRUE, mode = c(1, 2),
+        replicates_genetic = 10, mode = c(1, 2), monitor = TRUE,
         file = NULL)
 }
 
@@ -77,7 +77,7 @@ rarecol(data, network, replicates_field = 10,
     PAICE: A new R package to estimate the number of inter-island colonizations
     considering haplotype data and sample size. \emph{Journal of Biogeography},
     49(4), 577-589.DOI:
-    \href{https://doi.org/10.1111/jbi.14341}{10.1111/jbi.14341}
+    \href{https://onlinelibrary.wiley.com/doi/10.1111/jbi.14341}{10.1111/jbi.14341}
 }
 
 \seealso{
@@ -88,7 +88,7 @@ rarecol(data, network, replicates_field = 10,
     \code{\link{read.rarecol}} to import files generated from this function.
 }
 
-\examples{
+\examples{\donttest{
 data(CmonsData)
 data(CmonsNetwork)
 # Build rarefaction curves with 5 field and genetic replicates
@@ -98,8 +98,10 @@ data(CmonsNetwork)
 rcol <- rarecol(data = CmonsData, network = CmonsNetwork,
                 replicates_field = 5, replicates_genetic = 5,
                 monitor = TRUE, mode = c(1, 2))
+old.par <- par(no.readonly = TRUE) # To restore previous options
 par(mfrow = c(1, 2))
 plot(rcol) # Plotting results
-}
+par(old.par)
+}}
 
 \keyword{ datagen }

@@ -1,5 +1,5 @@
 #' @export
-summary.maxCol <- function(object) {
+summary.maxCol <- function(object, ...) {
     cat("Final curve of colonization events in genetic estimator",
         sep = "\n")
     if(object$FormulaGen == "NA") {
