@@ -2,15 +2,20 @@
 
 <!-- badges: start -->
 
-[![Maintaner](https://img.shields.io/badge/maintainer-Alberto%20J.%20Coello-rgb(2,%20118,%20117))](https://github.com/albertojcoello) [![Publication](https://img.shields.io/badge/maintainer-J.%20Biogeogr.-rgb(57,%20125,%2045))](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341)
+[![Maintainer](https://img.shields.io/badge/maintainer-Alberto%20J.%20Coello-blue)](https://github.com/albertojcoello) [![Publication](https://img.shields.io/badge/publication-J.%20Biogeogr.-darkgreen)](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341) [![CRAN](https://img.shields.io/badge/CRAN-1.0.1-red)](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341)
 
 <!-- badges: end -->
 
 PAICE is designed to estimate the number of inter-island colonization events in a island-like system.
 
 ## Installation
+The easy way to install PAICE is by the CRAN repository:
 
-To install PAICE use the **remotes** package:
+```r
+install.packages("PAICE")
+```
+
+Additionally, it is possible to install PAICE using the **remotes** package:
 
 ``` r
 install.packages("remotes")
@@ -21,7 +26,7 @@ remotes::install_github("PAICEcode/PAICE")
 
 PAICE allows a sampling effort correction for estimation of inter-islands colonization events in both field and genetic sampling.
 
-The documentation of PAICE package is available [here](./PAICE_1.0.0.pdf).
+The documentation of PAICE package is available [here](./PAICE_1.0.1.pdf).
 
 <p align="center">
 
