@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 
-[![Maintainer](https://img.shields.io/badge/maintainer-Alberto%20J.%20Coello-blue)](https://github.com/albertojcoello) [![Publication](https://img.shields.io/badge/publication-J.%20Biogeogr.-darkgreen)](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341) [![CRAN](https://img.shields.io/badge/CRAN-1.0.1-red)](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341)
+[![Maintainer](https://img.shields.io/badge/maintainer-Alberto%20J.%20Coello-blue)](https://github.com/albertojcoello) [![Publication](https://img.shields.io/badge/publication-J.%20Biogeogr.-darkgreen)](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341) [![CRAN](https://img.shields.io/badge/CRAN-1.0.1-red)]([https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14341](https://cran.r-project.org/web/packages/PAICE/index.html))
 
 <!-- badges: end -->
 
