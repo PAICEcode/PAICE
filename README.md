@@ -10,6 +10,6 @@
   <img src="https://github.com/PAICEcode/PAICE/assets/47033657/fad6a044-0e41-4799-aae2-8cf00aafae2f" width="200" height="200">
 </p>
 
-PAICE (Phylogeographic Analysis of Island Colonization Events) is an haplotype based method implemented into an R package to estimate the number of inter-island colonization events between the islands of an archipelago. Despite it was designed for oceanic archipelagos, it works in any island-like system (e.g., sky islands). For further information check our publication in Journal of Biogeography (Coello et al. [2022](https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14341)).
+PAICE (Phylogeographic Analysis of Island Colonization Events) is a haplotype-based method implemented into an R package to estimate the number of inter-island colonization events between the islands of an archipelago. Although designed for oceanic archipelagos, it works in any island-like system (e.g., sky islands). For further information, check our publication in Journal of Biogeography (Coello et al. [2022](https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14341)).
 
-A complete guide of PAICE can be found in our [Wiki](https://github.com/PAICEcode/PAICE/wiki).
+A complete guide can be found on our [Wiki](https://github.com/PAICEcode/PAICE/wiki).
